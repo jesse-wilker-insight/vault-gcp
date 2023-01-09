@@ -10,7 +10,7 @@ provider "google-beta" {
 
 module "vault-ent" {
   source               = "hashicorp/vault-ent-starter/gcp"
-  version              = "0.2.0"
+  version              = "0.1.2"
 
   # The shared DNS SAN of the TLS certs being used
   leader_tls_servername  = "vault.server.com"
@@ -31,5 +31,5 @@ module "vault-ent" {
   tls_secret_id          = "terraform_example_module_vault_tls_secret"
   
   # Path to Vault Enterprise license file
-  vault_license_filepath = "/Users/user/Downloads/vault.hclic"
+  vault_license_filepath = "./vault.hclic"
 }
